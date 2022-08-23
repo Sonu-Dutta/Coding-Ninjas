@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
-class Solution {
-
-    public int search(int arr[], int size, int x) {
+class FirstIndexOfElement {
+    public static int search(int arr[], int size, int x) {
         for (int i = 0; i < size; i++) {
             if (arr[i] == x) {
                 return i;
@@ -10,9 +9,6 @@ class Solution {
         }
         return -1;
     }
-}
-
-class FirstIndexOfElement {
 
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
@@ -22,10 +18,9 @@ class FirstIndexOfElement {
             arr[i] = sc.nextInt();
         }
         int x = sc.nextInt();
-        Solution s = new Solution();
-        int res = s.search(arr, n, x);
+        int res = search(arr, n, x);
         System.out.println(res);
+
         sc.close();
     }
-
 }
